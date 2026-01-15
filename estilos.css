@@ -1,0 +1,170 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background-color:#0b0f19;
+color:#eaeaea;
+}
+
+.hero{
+height:100vh;
+background:radial-gradient(circle,#1f3cff,#0b0f19);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+animation:aparecer 1.2s ease-out forwards;
+padding:20px;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero p{
+margin:15px 0;
+font-size:1.2rem;
+}
+
+.btn-principal{
+background-color:#ff3c78;
+color:white;
+padding:15px 25px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:transform 0.3s ease;
+}
+
+.btn-principal:hover{
+transform:scale(1.08);
+}
+
+.tema{
+display:flex;
+align-items:center;
+padding:60px 10%;
+gap:40px;
+animation:deslizar 1s ease both;
+}
+
+.tema img{
+width:280px;
+max-width:100%;
+border-radius:20px;
+transition:transform 0.4s ease,box-shadow 0.4s ease;
+}
+
+.tema img:hover{
+transform:scale(1.05) rotate(1deg);
+box-shadow:0 0 30px rgba(255,204,0,0.5);
+}
+
+.tema.izquierda{
+flex-direction:row;
+}
+
+.tema.derecha{
+flex-direction:row-reverse;
+}
+
+.info{
+max-width:600px;
+}
+
+.info h2{
+color:#ffcc00;
+margin-bottom:10px;
+}
+
+.info p{
+margin-bottom:15px;
+line-height:1.6;
+}
+
+.botones{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-secundario{
+border:2px solid #ffcc00;
+color:#ffcc00;
+padding:10px 18px;
+text-decoration:none;
+border-radius:25px;
+transition:all 0.3s ease;
+}
+
+.btn-secundario:hover{
+background-color:#ffcc00;
+color:black;
+transform:translateY(-2px);
+}
+
+.tabla-seccion{
+background-color:#11162a;
+padding:60px 10%;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+}
+
+th{
+background-color:#ff3c78;
+padding:12px;
+}
+
+td{
+padding:12px;
+text-align:center;
+}
+
+tr:nth-child(even){
+background-color:#1b2140;
+}
+
+footer{
+background-color:#05070d;
+text-align:center;
+padding:20px;
+}
+
+@keyframes aparecer{
+from{opacity:0;transform:scale(0.95);}
+to{opacity:1;transform:scale(1);}
+}
+
+@keyframes deslizar{
+from{opacity:0;transform:translateY(60px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.2rem;
+}
+.hero p{
+font-size:1rem;
+}
+.tema{
+flex-direction:column;
+padding:40px 8%;
+text-align:center;
+}
+.info{
+max-width:100%;
+}
+.botones{
+justify-content:center;
+}
+}
